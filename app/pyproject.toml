@@ -1,0 +1,16 @@
+[project]
+name = "gradio-agent-app"
+version = "0.1.0"
+description = "基于 LangChain 构建流式对话智能体"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastmcp>=3.1.0",
+    "gradio>=6.9.0",
+    "langchain>=1.2.10",
+    "langchain-mcp-adapters>=0.2.1",
+    "langchain-openai>=1.1.10",
+    "langgraph>=1.0.10",
+    "pydantic>=2.12.5",
+    "python-dotenv>=1.2.2",
+]

@@ -1,0 +1,8 @@
+.idea
+.trea
+.venv
+
+__pycache__
+
+model
+llama.cpp
