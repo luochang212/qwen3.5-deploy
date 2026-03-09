@@ -56,7 +56,6 @@ modelscope download --model unsloth/Qwen3.5-4B-GGUF Qwen3.5-4B-UD-Q4_K_XL.gguf -
     --top-p 0.95 \
     --top-k 20 \
     --min-p 0.00
-    --seed 3407
 ```
 
 ### 3.2 使用 API 服务
