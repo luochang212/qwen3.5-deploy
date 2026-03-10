@@ -1,0 +1,20 @@
+services:
+  llama-server:
+    # Mac 无 GPU，使用普通版本镜像
+    image: ghcr.io/ggml-org/llama.cpp:server
+    container_name: qwen3.5-server
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./models:/models:ro
+    command: >
+      -m /models/Qwen3.5-4B-UD-Q4_K_XL.gguf
+      --alias "unsloth/Qwen3.5-4B"
+      --ctx-size 16384
+      --temp 0.6
+      --top-p 0.95
+      --top-k 20
+      --min-p 0.00
+      --port 8001
+      --host 0.0.0.0
+    restart: on-failure:3

@@ -33,13 +33,13 @@ cp llama.cpp/build/bin/llama-* llama.cpp
 
 ```bash
 # 创建用于存放模型的文件夹
-mkdir model
+mkdir models
 
 # 安装 modelscope
 pip install modelscope -U
 
 # 下载模型文件
-modelscope download --model unsloth/Qwen3.5-4B-GGUF Qwen3.5-4B-UD-Q4_K_XL.gguf --local_dir ./model
+modelscope download --model unsloth/Qwen3.5-4B-GGUF Qwen3.5-4B-UD-Q4_K_XL.gguf --local_dir ./models
 ```
 
 ## 三、模型推理
@@ -50,7 +50,7 @@ modelscope download --model unsloth/Qwen3.5-4B-GGUF Qwen3.5-4B-UD-Q4_K_XL.gguf -
 ./llama.cpp/llama-cli --version
 
 ./llama.cpp/llama-cli \
-    --model ./model/Qwen3.5-4B-UD-Q4_K_XL.gguf \
+    --model ./models/Qwen3.5-4B-UD-Q4_K_XL.gguf \
     --ctx-size 16384 \
     --temp 0.6 \
     --top-p 0.95 \
@@ -66,7 +66,7 @@ modelscope download --model unsloth/Qwen3.5-4B-GGUF Qwen3.5-4B-UD-Q4_K_XL.gguf -
 ./llama.cpp/llama-server --version
 
 ./llama.cpp/llama-server \
-    --model ./model/Qwen3.5-4B-UD-Q4_K_XL.gguf \
+    --model ./models/Qwen3.5-4B-UD-Q4_K_XL.gguf \
     --alias "unsloth/Qwen3.5-4B" \
     --ctx-size 16384 \
     --temp 0.6 \
